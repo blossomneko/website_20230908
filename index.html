@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <title>portfolio</title>
+  <meta property="og:title" content="Portfolio" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="" />
+<meta property="og:image" content="images/production_id_4811927 (1080p).mp4" />
+<meta property="og:site_name" content="Portfolio" />
+<meta property="og:description" content="就活のための個人ポートフォリオ" />
+
+</head>
+<body>
+  <section class="first">
+    <video src="images/production_id_4811927 (1080p).mp4"autoplay loop muted></video>
+    <nav>
+      <ul class="list">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Skill</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <h1 class="name">Keiko<br>Hatano</h1>
+    <div class="music">
+    <p>Click MusicPlay</p>
+      <img src="images/baseline_play_circle_outline_white_24dp.png" id="icon">
+    </div>
+  </section>
+
+  <section class="About">
+    <div class="baby">
+      <img src="images/pexels-polina-tankilevitch-3875217.jpg" alt="">
+      <div class="babyin">
+        <p>長年、産婦人科で<br>働いてきました。</p>
+      </div>
+    </div>
+    <div class="cat">
+      <div class="catin">
+        <h2><a href="#">About</a></h2>
+        <p>動物が好き。<br>特に猫が好き。</p>
+      </div>
+      <img src="images/gaelle-marcel-Qtg_270Aa_I-unsplash2.jpg" alt="">
+    </div>
+    <div class="flower">
+      <img src="images/pexels-lina-kivaka-44826682.jpg" alt="">
+      <div class="flowerin">
+        <p>趣味は猫と遊ぶこと、<br>花を使った小物作り。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="Skill">
+    <h2><a href="#">Skill</a></h2>
+      <img src="images/cat-7726019_128022.png" class="content">
+      <p class="text">職業訓練にてプログラミングを勉強中<br>Web・・・HTML, CSS, JavaScript<br>プログラミング言語・・・python, Java</p>
+  </section>
+
+  <section class="Contact">
+    <div class="Contact">
+      <h2><a href="#">Contact</a></h2>
+      <div>
+        <img src="images/flowers-6556904_1280.png" alt="">
+        <div class="form">
+          <p><span>*</span>Name</p><input type="text">
+          <p><span>*</span>Address</p><input type="email">
+          <p><span>*</span>Message</p><textarea name="message"></textarea>
+          <p><input type="submit" name="send-button" value="Send"></p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- audio -->
+  <audio id="song">
+    <source src="audio/お昼寝.mp3" type="audio/mp3">
+  </audio>
+  <script>
+    let song = document.getElementById("song");
+    let icon = document.getElementById("icon");
+
+    icon.onclick = function(){
+      if(song.paused){
+        song.play();
+        icon.src = "images/baseline_pause_circle_outline_white_24dp.png";
+      }
+
+      else{
+        song.pause();
+        icon.src = "images/baseline_play_circle_outline_white_24dp.png";
+      }
+    };
+  </script>
+
+<!-- moving -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+      ScrollReveal({ reset: true, distance:"70px",duration: 2000 });
+         // first
+        ScrollReveal().reveal('.list li', { delay: 100, origin: "top",interval:300});
+        ScrollReveal().reveal('.name', { delay: 300, origin: "right"});
+        ScrollReveal().reveal('.music', { delay: 600, origin: "left"});
+
+        //About
+        ScrollReveal().reveal('.cat', { delay: 500, origin: "top"});
+        ScrollReveal().reveal('.baby', { delay: 800, origin: "bottom"});
+        ScrollReveal().reveal('.flower', { delay: 800, origin: "bottom"});
+
+        //skill
+        ScrollReveal().reveal('.Skill h2', { delay: 200, origin: "left"});
+        ScrollReveal().reveal('.content', { delay: 400, origin: "bottom"});
+        ScrollReveal().reveal('.text', { delay: 500, origin: "top"});
+
+        //Contact
+        ScrollReveal().reveal('.Contact h2', { delay: 200, origin: "left"});
+        ScrollReveal().reveal('.Contact img', { delay: 500, origin: "top"});
+        ScrollReveal().reveal('.form p', { delay: 500, origin: "left", interval:300});
+        ScrollReveal().reveal('.form', { delay: 500, origin: "bottom"});
+  </script>
+
+</body>
+</html>
